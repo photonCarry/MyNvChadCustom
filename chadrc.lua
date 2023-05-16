@@ -13,7 +13,10 @@ M.ui = {
 
   tabufline = {
     show_numbers = true,
-  }
+  },
+  nvdash = {
+    load_on_startup = true,
+  },
 }
 
 M.plugins = "custom.plugins"
