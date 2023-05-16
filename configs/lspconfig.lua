@@ -34,9 +34,15 @@ end
 vim.g.go_def_mode='gopls'
 vim.g.go_info_mode='gopls'
 
+-- go保存时自动import
 vim.api.nvim_create_autocmd('BufWritePre', {
   pattern = '*.go',
   callback = function()
     vim.lsp.buf.code_action({ context = { only = { 'source.organizeImports' } }, apply = true })
   end
 })
+
+vim.g.vista_sidebar_position = "vertical botright"
+vim.g.vista_default_executive = 'nvim_lsp'
+-- vim.g.vista_fzf_preview = ['right:50%']
+vim.g.vista_sidebar_width = 50

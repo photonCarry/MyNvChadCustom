@@ -51,6 +51,13 @@ local plugins = {
     "fatih/vim-go",
     lazy = false,
   },
+  {
+    "liuchengxu/vista.vim", -- 侧边导航
+    lazy = false,
+    init = function()
+      require("core.utils").load_mappings "vista"
+    end,
+  },
 
   -- To make a plugin not be loaded
   -- {
