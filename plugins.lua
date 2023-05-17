@@ -49,12 +49,14 @@ local plugins = {
 
   {
     "fatih/vim-go",
-    lazy = false,
+    init = function()
+      require("core.utils").lazy_load "vim-go"
+    end,
   },
   {
     "simrat39/symbols-outline.nvim", -- 侧边导航
-    lazy = false,
     init = function()
+      require("core.utils").lazy_load "symbols-outline.nvim"
       require("core.utils").load_mappings "symbolsoutline"
     end,
     config = function()
