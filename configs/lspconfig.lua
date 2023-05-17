@@ -46,3 +46,13 @@ vim.g.vista_sidebar_position = "vertical botright"
 vim.g.vista_default_executive = 'nvim_lsp'
 -- vim.g.vista_fzf_preview = ['right:50%']
 vim.g.vista_sidebar_width = 50
+
+-- 切换tab
+local function buffline_opts(desc)
+  return { desc = desc }
+end
+for i = 1, 9, 1 do
+  vim.keymap.set("n", string.format(",%s", i), function()
+    vim.api.nvim_set_current_buf(vim.t.bufs[i])
+  end, buffline_opts(string.format("Jump to buffer %s", i)))
+end
