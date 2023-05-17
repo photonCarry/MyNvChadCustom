@@ -38,7 +38,7 @@ M.lspconfig = {
   -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
 
   n = {
-    ["gr"] = { "<cmd> Telescope lsp_references <CR>", "LSP references" },
+    ["gr"] = { "<cmd> Telescope lsp_references include_current_line=true fname_width=100 <CR>", "LSP references" },
 
     ["<leader>ld"] = { "<cmd> Telescope lsp_document_symbols <CR>", "file references" },
     ["<leader>lr"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "workspace references" },
