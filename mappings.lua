@@ -4,7 +4,31 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    -- toggle
+
+    ["<C-h>"] = { "", "Empty left" },
+    ["<C-l>"] = { "", "Empty right" },
+    ["<C-j>"] = { "", "Empty down" },
+    ["<C-k>"] = { "", "Empty up" },
+  },
+}
+
+M.tabufline = {
+  n = {
+    ["<leader>b"] = { "", "buffer" },
+    ["<leader>bb"] = { "<cmd> enew <CR>", "New buffer" },
+    -- close buffer + hide terminal buffer
+    ["<leader>bx"] = {
+      function()
+        require("nvchad_ui.tabufline").close_buffer()
+      end,
+      "Close current buffer",
+    },
+    ["<leader>bo"] = {
+      function()
+        require("nvchad_ui.tabufline").closeOtherBufs()
+      end,
+      "Close current buffer",
+    },
   },
 }
 
