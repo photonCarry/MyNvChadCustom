@@ -58,6 +58,10 @@ M.nvimtree = {
     -- toggle
     ["<F1>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
     ["<leader>ft"] = { "<cmd>NvimTreeFindFile<CR>", "Target file in tree" }, 
+
+    ["<leader>fw"] = { "", "Empty" },
+    ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
+    ["<leader>fG"] = { "<cmd> Telescope grep_string <CR>", "Live grep cword" },
   },
 }
 
