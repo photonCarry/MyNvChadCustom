@@ -33,6 +33,7 @@ M.nvimtree = {
   n = {
     -- toggle
     ["<F1>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    ["<leader>ft"] = { "<cmd>NvimTreeFindFile<CR>", "Target file in tree" }, 
   },
 }
 
