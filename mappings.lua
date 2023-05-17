@@ -53,6 +53,13 @@ M.lspconfig = {
   },
 }
 
+M.telescope = {
+  n = {
+    ["<leader>fe"] = { "<cmd> Telescope diagnostics <CR>", "Show diagnostics" },
+    ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
+  },
+}
+
 M.nvimtree = {
   n = {
     -- toggle

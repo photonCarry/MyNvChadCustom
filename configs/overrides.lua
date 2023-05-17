@@ -86,4 +86,18 @@ M.nvimtree = {
   end
 }
 
+M.telescope = {
+  mappings = {
+    i = {
+      ["<C-c>"] = require("telescope.actions").close,
+      -- <C-n>/<Down>	Next item
+      -- <C-p>/<Up>
+      -- <C-u>	Scroll up in preview window
+      -- <C-d>	Scroll down in preview window
+      -- <C-/>	Show mappings for picker actions (insert mode)
+      -- ?	Show mappings for picker actions (normal mode)
+    },
+  },
+}
+
 return M
