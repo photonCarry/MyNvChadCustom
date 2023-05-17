@@ -63,6 +63,15 @@ local plugins = {
       require("symbols-outline").setup()
     end,
   },
+  {
+    "ggandor/leap.nvim", -- s快速搜索
+    init = function()
+      require("core.utils").lazy_load "leap.nvim"
+    end,
+    config = function()
+      require("leap").add_default_mappings()
+    end,
+  },
   
 
   -- To make a plugin not be loaded
