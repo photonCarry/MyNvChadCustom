@@ -52,12 +52,16 @@ local plugins = {
     lazy = false,
   },
   {
-    "liuchengxu/vista.vim", -- 侧边导航
+    "simrat39/symbols-outline.nvim", -- 侧边导航
     lazy = false,
     init = function()
-      require("core.utils").load_mappings "vista"
+      require("core.utils").load_mappings "symbolsoutline"
+    end,
+    config = function()
+      require("symbols-outline").setup()
     end,
   },
+  
 
   -- To make a plugin not be loaded
   -- {

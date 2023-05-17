@@ -36,12 +36,12 @@ M.nvimtree = {
   },
 }
 
-M.vista = {
+M.symbolsoutline = {
   plugin = true,
 
   n = {
     -- toggle
-    ["<F2>"] = { "<cmd> Vista!! <CR>", "Toggle vista" },
+    ["<F2>"] = { "<cmd>SymbolsOutline<CR>", "Toggle symbols outline" },
   },
 }
 
