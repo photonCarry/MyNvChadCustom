@@ -99,6 +99,7 @@ M.telescope = {
       preview_cutoff = 0,
       width = 0.9
     },
+    file_ignore_patterns = { "node_modules", "vendor", "myVim" },
     mappings = {
       i = {
         ["<C-c>"] = require("telescope.actions").close,

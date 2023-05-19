@@ -39,6 +39,7 @@ M.lspconfig = {
 
   n = {
     ["gr"] = { "<cmd> Telescope lsp_references include_current_line=true fname_width=100 <CR>", "LSP references" },
+    ["gi"] = { "<cmd> Telescope lsp_implementations include_current_line=true fname_width=100 <CR>", "LSP implementations" },
 
     ["<leader>ld"] = { "<cmd> Telescope lsp_document_symbols <CR>", "file references" },
     ["<leader>lr"] = { "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", "workspace references" },
