@@ -9,6 +9,7 @@ M.general = {
     ["<C-l>"] = { "", "Empty right" },
     ["<C-j>"] = { "", "Empty down" },
     ["<C-k>"] = { "", "Empty up" },
+    ["<tab>"] = { "<C-i>", "go to next" },
   },
 }
 
