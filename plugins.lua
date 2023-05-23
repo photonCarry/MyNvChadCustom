@@ -58,9 +58,10 @@ local plugins = {
 
   {
     "fatih/vim-go",
-    init = function()
-      require("core.utils").lazy_load "vim-go"
-    end,
+    ft = "go",
+    -- init = function()
+    --   require("core.utils").lazy_load "vim-go"
+    -- end,
   },
   {
     "simrat39/symbols-outline.nvim", -- 侧边导航
@@ -118,6 +119,13 @@ local plugins = {
       }))
     end,
   },
+  {
+    "iamcco/markdown-preview.nvim",
+    ft = "markdown",
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  }
   
 
   -- To make a plugin not be loaded
