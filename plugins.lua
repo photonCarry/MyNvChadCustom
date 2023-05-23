@@ -42,6 +42,10 @@ local plugins = {
     "nvim-telescope/telescope.nvim",
     opts = overrides.telescope,
   },
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = overrides.gitsigns,
+  },
 
   -- Install a plugin
   {
