@@ -131,6 +131,27 @@ local plugins = {
     build = function()
       vim.fn["mkdp#util#install"]()
     end,
+  },
+  -- 自动缩进
+  {
+    "Darazaki/indent-o-matic",
+    init = function()
+      require("core.utils").lazy_load "indent-o-matic"
+    end,
+    config = function(_, opts)
+      require('indent-o-matic').setup {
+        -- The values indicated here are the defaults
+    
+        -- Number of lines without indentation before giving up (use -1 for infinite)
+        max_lines = 2048,
+    
+        -- Space indentations that should be detected
+        standard_widths = { 2, 4, 8 },
+    
+        -- Skip multi-line comments and strings (more accurate detection but less performant)
+        skip_multiline = true,
+    }
+    end,
   }
   
 
