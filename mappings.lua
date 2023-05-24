@@ -2,6 +2,11 @@
 local M = {}
 
 M.general = {
+  i = {
+    ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
+    ["<C-v>"] = { "<ESC>yi", "Paste" },
+  },
+
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
 
@@ -28,7 +33,7 @@ M.tabufline = {
       function()
         require("nvchad_ui.tabufline").closeOtherBufs()
       end,
-      "Close current buffer",
+      "Close other buffer",
     },
   },
 }

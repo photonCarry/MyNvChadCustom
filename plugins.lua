@@ -46,6 +46,12 @@ local plugins = {
     "lewis6991/gitsigns.nvim",
     opts = overrides.gitsigns,
   },
+  {
+    "NvChad/base46",
+    config = function()
+      require("base46").toggle_transparency()
+    end,
+  },
 
   -- Install a plugin
   {
