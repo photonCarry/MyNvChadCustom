@@ -4,7 +4,7 @@ local M = {}
 M.general = {
   i = {
     ["<C-s>"] = { "<cmd> w <CR>", "Save file" },
-    ["<C-v>"] = { "<ESC>yi", "Paste" },
+    ["<C-v>"] = { "<Esc>pa", "Paste" },
   },
 
   n = {
@@ -15,6 +15,8 @@ M.general = {
     ["<C-j>"] = { "", "Empty down" },
     ["<C-k>"] = { "", "Empty up" },
     ["<tab>"] = { "<C-i>", "go to next" },
+    ["<C-n>"] = { "", "Empty down" },
+    ["<C-p>"] = { "<cmd> Telescope find_files <CR>", "Find files" },
   },
 }
 
@@ -62,8 +64,15 @@ M.lspconfig = {
 
 M.telescope = {
   n = {
-    ["<leader>fe"] = { "<cmd> Telescope diagnostics <CR>", "Show diagnostics" },
-    ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
+    ["<Space>fe"] = { "<cmd> Telescope diagnostics <CR>", "Show diagnostics" },
+    ["<Space>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
+    ["<Space>ff"] = { "<cmd> Telescope find_files <CR>", "Find files" },
+    ["<Space>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
+    ["<Space>fw"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
+    ["<Space>fb"] = { "<cmd> Telescope buffers <CR>", "Find buffers" },
+    ["<Space>fh"] = { "<cmd> Telescope help_tags <CR>", "Help page" },
+    ["<Space>fo"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
+    ["<Space>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
   },
 }
 
@@ -71,9 +80,7 @@ M.nvimtree = {
   n = {
     -- toggle
     ["<F1>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
-    ["<leader>ft"] = { "<cmd>NvimTreeFindFile<CR>", "Target file in tree" }, 
-
-    ["<leader>fw"] = { "", "Empty" },
+    ["<Space>ft"] = { "<cmd>NvimTreeFindFile<CR>", "Target file in tree" }, 
     ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
     ["<leader>fG"] = { "<cmd> Telescope grep_string <CR>", "Live grep cword" },
   },

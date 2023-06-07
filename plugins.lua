@@ -6,6 +6,11 @@ local plugins = {
   -- Override plugin definition options
 
   {
+    "folke/which-key.nvim",
+    keys = { "<leader>", '"', "'", "`", "c", "v", " " },
+  },
+
+  {
     "neovim/nvim-lspconfig",
     dependencies = {
       -- format & linting
