@@ -64,6 +64,7 @@ M.lspconfig = {
 
 M.telescope = {
   n = {
+    ["<C-t>"] = { "<cmd> Telescope resume <CR>", "resume Telescope" },
     ["<Space>fe"] = { "<cmd> Telescope diagnostics <CR>", "Show diagnostics" },
     ["<Space>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
     ["<Space>ff"] = { "<cmd> Telescope find_files <CR>", "Find files" },
