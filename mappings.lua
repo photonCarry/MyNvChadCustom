@@ -24,6 +24,26 @@ M.general = {
   }
 }
 
+-- 历史原因，C-/没法被映射
+-- M.comment = {
+--   -- toggle comment in both modes
+--   n = {
+--     ["<C-/>"] = {
+--       function()
+--         require("Comment.api").toggle.linewise.current()
+--       end,
+--       "Toggle comment",
+--     },
+--   },
+
+--   v = {
+--     ["<C-/>"] = {
+--       "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+--       "Toggle comment",
+--     },
+--   },
+-- }
+
 M.tabufline = {
   n = {
     ["<leader>b"] = { "", "buffer" },
