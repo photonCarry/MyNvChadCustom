@@ -53,6 +53,9 @@ M.nvimtree = {
       show = {
         git = true,
       },
+      glyphs = {
+        folder = { default = "󰉋"},
+      },
     },
   },
   update_focused_file = {
