@@ -18,6 +18,10 @@ M.general = {
     ["<C-n>"] = { "", "Empty down" },
     ["<C-p>"] = { "<cmd> Telescope find_files <CR>", "Find files" },
   },
+
+  v = {
+    ["x"] = {"d", ""}
+  }
 }
 
 M.tabufline = {
