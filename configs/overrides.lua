@@ -65,11 +65,11 @@ M.nvimtree = {
 
   on_attach = function (bufnr)
     local api = require('nvim-tree.api')
-  
+
     local function opts(desc)
       return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
     end
-  
+
     vim.keymap.set('n', '<CR>', api.node.open.edit, opts('Open'))
     vim.keymap.set('n', 'o', api.node.open.edit, opts('Open'))
     vim.keymap.set('n', 'l', api.node.open.edit, opts('Open'))
@@ -91,6 +91,17 @@ M.nvimtree = {
 
 M.telescope = {
   defaults = {
+    vimgrep_arguments = {
+      "rg",
+      "-L",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
+      "--no-ignore-vcs",
+    },
     layout_strategy = "vertical",
     layout_config = {
       vertical = {
