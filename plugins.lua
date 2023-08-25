@@ -54,7 +54,7 @@ local plugins = {
   {
     "NvChad/base46",
     config = function()
-      require("base46").toggle_transparency()
+      -- require("base46").toggle_transparency()
     end,
   },
 
