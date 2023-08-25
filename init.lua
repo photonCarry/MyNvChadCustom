@@ -18,4 +18,4 @@ vim.cmd("set lcs+=space:·")
 
 vim.g.mapleader = ","
 
-require "filetypes"
+require('custom.filetypes')
