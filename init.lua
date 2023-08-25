@@ -17,3 +17,5 @@ vim.cmd("set list") -- 关闭： set nolist
 vim.cmd("set lcs+=space:·")
 
 vim.g.mapleader = ","
+
+require "filetypes"

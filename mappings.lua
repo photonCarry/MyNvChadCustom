@@ -17,6 +17,18 @@ M.general = {
     ["<tab>"] = { "<C-i>", "go to next" },
     ["<C-n>"] = { "", "Empty down" },
     ["<C-p>"] = { "<cmd> Telescope find_files <CR>", "Find files" },
+    ["<leader>t2"] = {
+      function()
+        vim.opt_local.tabstop=2
+        vim.opt_local.softtabstop=2
+        vim.opt_local.shiftwidth=2
+      end, "set tabstop=2" },
+    ["<leader>t4"] = {
+      function()
+        vim.opt_local.tabstop=4
+        vim.opt_local.softtabstop=4
+        vim.opt_local.shiftwidth=4
+      end, "set tabstop=2" },
   },
 
   v = {
