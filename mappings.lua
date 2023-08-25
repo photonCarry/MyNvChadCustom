@@ -131,8 +131,73 @@ M.debug = {
         end
         require('dap').continue()
       end,
-      "debug continue"
-    }
+      "continue"
+    },
+    ["<F5>"] = {
+      function ()
+        if vim.fn.filereadable('.vscode/launch.json') then
+          require('dap.ext.vscode').load_launchjs()
+        end
+        require('dap').continue()
+      end,
+      "continue"
+    },
+    ["<F10>"] = {
+      function ()
+        require('dap').step_over()
+      end,
+      "step over"
+    },
+    ["<F11>"] = {
+      function ()
+        require('dap').step_into()
+      end,
+      "step in"
+    },
+    ["<leader>do"] = {
+      function ()
+        require('dap').step_out()
+      end,
+      "step out"
+    },
+    ["<F9>"] = {
+      function ()
+        require('dap').toggle_breakpoint()
+      end,
+      "toggle_breakpoint"
+    },
+    ["<leader>dt"] = {
+      function ()
+        require('dap').terminate()
+      end,
+      "terminate"
+    },
+    ["<leader>dh"] = {
+      function ()
+        require('dap.ui.widgets').hover()
+      end,
+      "hover"
+    },
+    ["<leader>dp"] = {
+      function ()
+        require('dap.ui.widgets').preview()
+      end,
+      "preview"
+    },
+    ["<leader>df"] = {
+      function ()
+        local widgets = require('dap.ui.widgets')
+        widgets.centered_float(widgets.frames)
+      end,
+      "frames"
+    },
+    ["<leader>ds"] = {
+      function ()
+        local widgets = require('dap.ui.widgets')
+        widgets.centered_float(widgets.scopes)
+      end,
+      "scopes"
+    },
   }
 }
 
