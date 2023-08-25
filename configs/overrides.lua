@@ -61,7 +61,6 @@ M.nvimtree = {
   update_focused_file = {
     enable = false,
   },
-  remove_keymaps = true,
 
   on_attach = function (bufnr)
     local api = require('nvim-tree.api')

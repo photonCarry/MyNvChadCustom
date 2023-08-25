@@ -75,6 +75,41 @@ local plugins = {
     -- end,
   },
   {
+    "mfussenegger/nvim-dap",
+    init = function()
+       require("core.utils").lazy_load "nvim-dap"
+       require("core.utils").load_mappings "debug"
+    end,
+    config = function ()
+      local dap = require('dap')
+      dap.adapters.go = {
+        type = 'executable';
+        command = 'node';
+        args = {os.getenv('HOME') .. '/vscode-go/dist/debugAdapter.js'};
+        --args = {'/home/yy/vscode-go/dist/debugAdapter.js'};
+      }
+    end,
+  },
+  {
+    'rcarriga/nvim-dap-ui',
+    init = function()
+       require("core.utils").lazy_load "nvim-dap-ui"
+    end,
+    config = function()
+      local dap, dapui = require("dap"), require("dapui")
+      dapui.setup()
+      dap.listeners.after.event_initialized["dapui_config"] = function()
+        dapui.open()
+      end
+      dap.listeners.before.event_terminated["dapui_config"] = function()
+        dapui.close()
+      end
+      dap.listeners.before.event_exited["dapui_config"] = function()
+        dapui.close()
+      end
+    end,
+  },
+  {
     "simrat39/symbols-outline.nvim", -- 侧边导航
     init = function()
       require("core.utils").lazy_load "symbols-outline.nvim"

@@ -120,6 +120,22 @@ M.symbolsoutline = {
   },
 }
 
+M.debug = {
+  plugin = true,
+
+  n = {
+    ["<leader>dc"] = {
+      function()
+        if vim.fn.filereadable('.vscode/launch.json') then
+          require('dap.ext.vscode').load_launchjs()
+        end
+        require('dap').continue()
+      end,
+      "debug continue"
+    }
+  }
+}
+
 -- more keybinds!
 
 return M
