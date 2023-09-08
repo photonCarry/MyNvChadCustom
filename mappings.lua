@@ -63,13 +63,13 @@ M.tabufline = {
     -- close buffer + hide terminal buffer
     ["<leader>bx"] = {
       function()
-        require("nvchad_ui.tabufline").close_buffer()
+        require("nvchad.tabufline").close_buffer()
       end,
       "Close current buffer",
     },
     ["<leader>bo"] = {
       function()
-        require("nvchad_ui.tabufline").closeOtherBufs()
+        require("nvchad.tabufline").closeOtherBufs()
       end,
       "Close other buffer",
     },
