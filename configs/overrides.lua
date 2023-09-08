@@ -138,4 +138,19 @@ M.gitsigns = {
   current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
 }
 
+M.nvterm = {
+  terminals = {
+    type_opts = {
+      float = {
+        relative = 'editor',
+        row = 0.05,
+        col = 0.05,
+        width = 0.9,
+        height = 0.85,
+        border = "single",
+      }
+    }
+  }
+}
+
 return M

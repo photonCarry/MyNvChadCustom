@@ -57,6 +57,10 @@ local plugins = {
       -- require("base46").toggle_transparency()
     end,
   },
+  {
+    "NvChad/nvterm",
+    opts = overrides.nvterm,
+  },
 
   -- Install a plugin
   {

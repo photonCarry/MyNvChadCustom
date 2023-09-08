@@ -102,7 +102,6 @@ M.telescope = {
   n = {
     ["<C-t>"] = { "<cmd> Telescope resume <CR>", "resume Telescope" },
     ["<Space>fe"] = { "<cmd> Telescope diagnostics <CR>", "Show diagnostics" },
-    ["<Space>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
     ["<Space>ff"] = { "<cmd> Telescope find_files <CR>", "Find files" },
     ["<Space>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
     ["<Space>fw"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
@@ -110,6 +109,8 @@ M.telescope = {
     ["<Space>fh"] = { "<cmd> Telescope help_tags <CR>", "Help page" },
     ["<Space>fo"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },
     ["<Space>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "Find in current buffer" },
+
+    ["<leader>gc"] = { "<cmd> Telescope git_commits <CR>", "Git commits" },
   },
 }
 
