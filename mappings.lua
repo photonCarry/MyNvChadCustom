@@ -214,6 +214,17 @@ M.debug = {
   }
 }
 
--- more keybinds!
+M.nvterm = {
+  plugin = true,
+
+  t = {
+    -- back to IDE/editor
+    ["<C-w>"] = {
+      "<C-\\><C-n><C-w>",
+      "Toggle C-w",
+    }
+  }
+}
+
 
 return M
